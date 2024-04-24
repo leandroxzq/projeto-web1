@@ -103,11 +103,16 @@ header nav a .logo {
     font-family: 'protest', sans-serif;
     color: #fff;
     font-size: 2rem;
+    transition: transform 0.3s ease;   
 }
 
 header nav a .logo::after {
     font-size: 0.3em;
     content: '©';
+}
+
+header nav a .logo:hover {
+    transform: scale(1.1);
 }
 
 header nav a {
