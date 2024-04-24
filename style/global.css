@@ -132,9 +132,13 @@ header .header-icon {
 
 header .header-icon span {
     color: #ccc;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
 }
 
 header .header-icon span:hover {
+    background-color: #ccccccab;
     color: white;
 }
 
