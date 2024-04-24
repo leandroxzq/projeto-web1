@@ -33,7 +33,7 @@ header {
 
 .fundo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: end;
     gap: 30px;
     height: 100%;
@@ -46,40 +46,52 @@ header {
 }
 
 .logos {
-    margin: 0 10px; /* Ajuste conforme necessário */
-    animation: animacaoLogo 2s infinite alternate; /* 5s é o tempo de duração da animação */
+    margin: 0 10px;
+    animation: animacaoLogo 2s infinite alternate;
 }
   
 @keyframes animacaoLogo {
 0% {
-    transform: scale(1); /* Escala normal */
+    transform: scale(1);
 }
 100% {
-    transform: scale(1.1); /* Escala aumentada */
+    transform: scale(1.05);
 }
 }
 
 .logos {
-    z-index: 20;
+    height: 120px;
+    width: 140px;
     margin-bottom: 75px;
-}
-
-.logos:nth-child(1){
-    height: 220px;
-    width: 250px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.78));
+    margin-right: 75px;
+    filter: drop-shadow(5px 5px 15px rgb(255, 255, 255));
 }
 
 .logos:nth-child(2){
-    height: 220px;
-    width: 250px;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.78));
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .logos:nth-child(3){
-    height: 160px;
-    width: 400px;
-    filter: drop-shadow(5px 5px 5px rgba(77, 77, 77, 0.78));
+    height: 110px;
+    width: 240px;
+}
+
+@media screen and (max-width: 850px) {
+    .fundo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logos {
+        height: 80px;
+        width: 100px;
+    }
+
+    .logos:nth-child(3){
+        height: 60px;
+        width: 140px;
+    }
 }
 
 main {
