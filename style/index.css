@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 header {
+    font-family: "Jersey 20";
     background-color: #000;
     position: sticky;
     top: 0;
@@ -13,9 +21,13 @@ header {
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    padding: 0 15px;
-    height: 80px;
+    padding: 0 35px;
+    height: 100px;
     width: 100%;
+}
+
+header nav a .logo {
+    font-size: 2rem;
 }
 
 .topo {
@@ -26,30 +38,17 @@ header {
 .fundo {
     height: 100%;
     width: 100%;
-    background-image: url('../img/fundo/Lookbook_D2_2024_17.jpg'); 
+    background-image: url('../img/fundo/vllutombg.jpg'); 
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: -1;
 }
 
-.titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 25px 0px;
-}
-
-.titulo p {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.titulo span {
-    font-size: 1.2rem;
-    color: #666; /* Cor do texto secundário */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 0px;
 }
 
 .container {
@@ -57,14 +56,12 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 1200px;
+    padding: 50px 0px;
+    width: 100%;
 }
 
 .card {
     position: relative;
-    border: 1px solid #ccc;
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px; 
     max-width: 280px; 
     max-height: 270px;
     margin: 10px;
@@ -74,8 +71,6 @@ header {
     flex: 1 1 280px;
     width: 100%;
     height: 100%;
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px; 
 }
 
 .card a {
