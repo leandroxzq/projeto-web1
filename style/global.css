@@ -135,7 +135,12 @@ header .header-icon span:hover {
     header {
         padding: 0;
         justify-content: center;
+        align-items: center;
         height: 130px;
+    }
+
+    .logos {
+        margin: 0;
     }
 }
 
@@ -185,6 +190,7 @@ footer a:hover {
 
 @media screen and (max-width: 700px) {
     .icon-network {
+        flex-wrap: wrap;
     }
 
     footer {
@@ -200,5 +206,12 @@ footer a:hover {
     .icon-network {
         display: block;
         order: 3;
+    }
+
+    @media screen and (max-width: 340px) {
+        footer {
+            text-align: center;
+            height: 200px;
+        }
     }
 }
