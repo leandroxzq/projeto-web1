@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap');
 
 @font-face {
     font-family: 'protest';
@@ -17,7 +18,11 @@ html {
     font-family: "Roboto Condensed", sans-serif;
 }
 
-.alternate {   
+h3, footer {
+    font-family: "Kanit", sans-serif;
+}
+
+.alternate-container {   
     font-size: 1.4rem;
     background-color: #000;
     color: #fff;
@@ -28,12 +33,12 @@ html {
 }
 
 @media screen and (max-width: 600px) {  
-    .alternate {
+    .alternate-container {
         font-size: 1rem;
     }
 }
 
-.texto-alternado {
+.alternate-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,34 +56,18 @@ html {
     50% { opacity: 1; }
 }
 
-.texto-alternado {
+.alternate-text {
     opacity: 0;
     animation: alternar 6s infinite;
 }
 
-.texto-alternado:nth-child(2) {
+.alternate-text:nth-child(2) {
     animation-delay: 3s; 
 }
 
 @keyframes alternar {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
-}
-
-.topo {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-}
-
-.fundo {
-    height: 100vh;
-    width: 100%;
-    background-image: url('../img/fundo/Lookbook_D2_2024_17.jpg'); 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: -1; 
 }
 
 header {
@@ -142,6 +131,14 @@ header .header-icon span:hover {
     color: white;
 }
 
+@media screen and (max-width: 500px) {
+    header {
+        padding: 0;
+        justify-content: center;
+        height: 130px;
+    }
+}
+
 p {
     line-height: 32px;
 }
@@ -151,26 +148,57 @@ footer {
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     background: #000;
     color: #ccc;
-    height: 50px;
-    margin-top: 25px;
-}
-
-footer p {
-    font-family: "Jersey 20";
-}
-
-footer i {
-    margin: 0 5px;
-    font-size: 1.2rem;
+    height: 60px;
+    padding: 0 20px;
+    font-size: 1.3rem;
 }
 
 footer a {
-    margin-left: 5px;
     color: #ccc;
     text-decoration: underline;
+}
+
+footer a:hover {
+    color: #fff
+}
+
+.icon-network {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-network .bi {
+    padding: 10px; 
+    transition: font-size 0.3s ease;
+}
+
+.icon-network .bi:hover {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 700px) {
+    .icon-network {
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0px;
+        gap: 5px;
+        height: 120px;
+        font-size: 1rem;
+    }
+
+    .icon-network {
+        display: block;
+        order: 3;
+    }
 }
