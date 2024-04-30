@@ -129,12 +129,17 @@ main {
     }
 
     .product-card {
+        padding: 0 0 60px 0;
+        max-height: 550px;
         min-width: 100%;
         flex: 1 1 calc(100% - 20px);
     }
 
-    .product-card:hover .product-info {
-        display: none;
+    .product-card .product-info {
+        font-size: 1.5rem;
+        padding: 0;
+        opacity: 1;
+        position: static;
     }
 }
 
@@ -173,4 +178,8 @@ main {
 .product-info p, span {
     font-weight: bold;
     color: #000;
+}
+
+.product-card .info-mobile {
+    display: none;
 }

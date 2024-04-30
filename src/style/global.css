@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'protest';
-    src: url('../font/Protest.ttf') format('truetype'),
-         url('../font/Protest.otf') format('opentype');
+    src: url('../../src/font/Protest.ttf') format('truetype'),
+         url('../../src/font/Protest.otf') format('opentype');
 }
 
 * {

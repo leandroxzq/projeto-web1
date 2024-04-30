@@ -53,6 +53,7 @@ main {
     white-space: pre-line;
     font-size: 1.2rem;
     line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .info .size-paragraph span {
@@ -60,10 +61,22 @@ main {
     font-size: 1.6rem;
 }
 
-form #size {
-    text-align: start;
-    margin: 20px 0 20px 30px;
-    padding: 10px 40px 10px 5px;
+label {
+    margin-right: 15px;
+}
+
+select {
+    padding: 8px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    background-color: #fff; 
+    width: 160px;
+}
+
+
+select option {
+    font-size: 1.1rem;
 }
 
 input[type="button"] {
