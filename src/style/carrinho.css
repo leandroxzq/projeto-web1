@@ -11,9 +11,10 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .cart-container {
-        max-width: 100vw;
+        max-width: 95vw;
+        padding: 5px;
     }
 }
 
@@ -33,7 +34,6 @@ table {
 thead th, tbody td {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #ccc;
 }
 
 thead th {
@@ -90,7 +90,48 @@ select {
     width: 120px;
 }
 
-
 select option {
     font-size: 0.8rem;
+}
+
+.table-mobile {
+    display: none;
+}
+
+@media screen and (max-width:670px) {
+    .table-desktop {
+        display: none;
+    }
+
+    .table-mobile {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+    }
+
+    tr, td, th {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    tr {
+        width: 100%;
+    }
+
+    th {
+        width: 20%;
+    }
+
+    td {
+        width: 80%;
+    }
+
+    tbody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
