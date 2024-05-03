@@ -144,6 +144,16 @@ header .header-icon span:hover {
     }
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        position: sticky;
+    }
+
+    header nav a .logo {
+        font-size: 1.8rem;
+    }
+}
+
 p {
     line-height: 32px;
 }
