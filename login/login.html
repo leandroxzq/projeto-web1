@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../src/style/login.css">
-    <title>Central do Cliente</title>
+    <title>Vllutom</title>
+    <style>
+        form {
+            height: 400px;
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <label for="nome">Nome de Usuário</label>
+    <div class="background"></div>
+    <form action="" id="form">
+        <nav>
+            <a href="../index.html"><h1 class="logo black">Vllutom</h1></a>
+        </nav>
+        <label for="nome">Nome de Usuário:</label>
+        <div id="rnome" class="error"></div>
         <input type="text" id="nome" name="nome">
         <label for="senha">Senha:</label>
-        <input type="senha" id="senha" name="senha">
+        <div id="rsenha" class="error"></div>
+        <input type="password" id="senha" name="senha">
         <a href="novo_usuario.html">Cadastre-se</a>
         <a href="recuperar_senha.html">Esqueceu sua senha?</a>
-        <a href="../index.html" class="entrar">Entrar</a>
+        <button class="entrar" type="submit" onclick="validarLogin(event)">Entrar</button>
+        <script src="script.js"></script>
     </form>
 </body>
 </html>

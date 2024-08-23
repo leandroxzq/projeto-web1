@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'protest';
+    src: url('../font/Protest.ttf') format('truetype'),
+         url('../font/Protest.otf') format('opentype');
+}
+
+.logo {
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'protest', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.black {
+    color: #000;
+}
+
+.logo::after {
+    font-size: 0.3em;
+    content: '©';
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}

@@ -43,6 +43,13 @@ header {
     background-position: center;
     position: relative;
     z-index: -1;
+    filter: opacity(0.65);
+    box-shadow: inset 0px 0px 100px 100px rgba(0,0,0,0.52);   
+}
+
+.background-container {
+    background-color: #000;
+    z-index: -2;
 }
 
 .logos {

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
 
+@import url('logo.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,38 +11,52 @@
 body {
     display: grid;
     place-items: center;
-    font-family: "Ubuntu";
     height: 100vh;
-    margin: 0px;
-    padding: 0 24px;
-    background-image: url(../img/layered-peaks-haikei.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -250px;
     font-family: "Ubuntu";
-    color: #000000;
-    animation: rotate 6s infinite alternate linear;
+    background-color: #000;
+}
+
+.background {
+    height: 101vh;
+    position: fixed;
+    width: 101vw;
+    background-image: url(../img/fundo/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: rotate 8s infinite alternate linear;
+    z-index: 1;
+    filter: blur(0.3rem);
+    filter: opacity(0.50);
+    box-shadow: inset 0px 0px 112px 255px rgba(0,0,0,0.52);   
 }
 
 @keyframes rotate {
     100%{
-        background-position: 15% 30%;
+        background-position: 5% 20%;
     }
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    padding: 35px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    background-color: #fff;
+    justify-content: space-between;
+    width: 450px;
+    padding: 20px 35px;
+    border: 1px solid #cccccc65;
+    box-shadow: 0px 0px 100px 1px;
+    border-radius: 8px;
+    background: #f7f7f7;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1.2rem;
 }
 
 label {
-    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -48,7 +64,7 @@ input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
@@ -59,18 +75,35 @@ a {
 }
 
 .entrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1em;
     margin-top: 10px;
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
     width: 100%;
     padding: 10px;
-    background-color: #000;
+    background-color: rgb(15, 83, 72);
     color: #fff;
-    border-radius: 4px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 .entrar:hover {
     background-color: #323232;
 }
+
+.error {
+    margin: 5px;
+    width: 100%;
+    color: red;
+}
+
+@media (max-width: 540px) {
+    form {
+        padding: 20px;
+        width: 350px;
+    }
+  }
