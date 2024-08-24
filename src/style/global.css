@@ -22,7 +22,7 @@ h3, footer {
 .alternate-container {   
     font-size: 1.4rem;
     background-color: var(--primary-color);
-    color: var(--seconday-color);
+    color: #fff;
     position: relative;
     width: 100%;
     height: 25px;
