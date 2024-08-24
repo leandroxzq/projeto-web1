@@ -101,7 +101,7 @@ a {
     color: red;
 }
 
-@media (max-width: 540px) {
+@media (width <= 540px) {
     form {
         padding: 20px;
         width: 350px;

@@ -25,7 +25,7 @@ main {
     width: 37.5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media (width <= 600px) {
     .container img {
         width: 25rem;
     }
@@ -95,5 +95,3 @@ input[type="button"] {
 input[type="button"]:hover {
     background-color: rgb(3, 62, 52);
 }
-
-
