@@ -1,5 +1,7 @@
+@import url('../../paleta/paleta.css');
+
 main {
-    max-width: 1400px;
+    min-width: 1400px;
     margin: 0 auto;
     padding: 50px 10px;
 }
@@ -82,7 +84,7 @@ select option {
 input[type="button"] {
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: rgb(15, 83, 72);
+    background-color: var(--primary-green);
     color: #fff;
     border: none;
     padding: 15px 25px;
@@ -93,5 +95,5 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: rgb(3, 62, 52);
+    background-color: var(--secondary-green);
 }

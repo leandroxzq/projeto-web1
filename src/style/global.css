@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap');
 
 @import url('logo.css');
+@import url('../../paleta/paleta.css');
 
 * {
     margin: 0;
@@ -20,8 +21,8 @@ h3, footer {
 
 .alternate-container {   
     font-size: 1.4rem;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--seconday-color);
     position: relative;
     width: 100%;
     height: 25px;
@@ -68,12 +69,12 @@ h3, footer {
 
 header {
     font-family: "Jersey 20";
-    background-color: rgb(0, 0, 0); 
+    background-color: var(--primary-color); 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
+    color: var(-);
     padding: 0 35px;
     height: 100px;
     width: 100%;
@@ -112,7 +113,7 @@ header .header-icon span {
 
 header .header-icon span:hover {
     background-color: #ccccccab;
-    color: white;
+    color: #fff;
 }
 
 @media (width <= 500px) {
@@ -153,7 +154,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: #000;
+    background: var(--primary-color);
     color: #ccc;
     height: 60px;
     padding: 0 20px;
@@ -165,10 +166,6 @@ footer a {
     text-decoration: underline;
 }
 
-footer a:hover {
-    color: #fff
-}
-
 .icon-network {
     display: flex;
     justify-content: center;
@@ -177,12 +174,14 @@ footer a:hover {
 
 .icon-network .bi {
     padding: 10px; 
+    color: #ccc;
     transition: font-size 0.3s ease;
 }
 
 .icon-network .bi:hover {
     color: #fff;
     font-size: 1.6rem;
+    transition: 0.5s;
 }
 
 @media (width <= 700px) {

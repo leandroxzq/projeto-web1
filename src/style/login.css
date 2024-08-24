@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 @import url('logo.css');
+@import url('../../paleta/paleta.css');
 
 * {
     margin: 0;
@@ -13,7 +14,7 @@ body {
     place-items: center;
     height: 100vh;
     font-family: "Ubuntu";
-    background-color: #000;
+    background-color: var(--primary-color);
 }
 
 .background {
@@ -84,7 +85,7 @@ a {
     text-decoration: none;
     width: 100%;
     padding: 10px;
-    background-color: rgb(15, 83, 72);
+    background-color: var(--primary-green);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -92,7 +93,7 @@ a {
 }
 
 .entrar:hover {
-    background-color: #323232;
+    background-color: var(--secondary-green);
 }
 
 .error {
