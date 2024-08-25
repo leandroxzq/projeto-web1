@@ -222,17 +222,73 @@ main {
     display: none;
 }
 
-.container-main .promotion img {
+.promotion {
     position: fixed;
     bottom: 2rem;
-    right: 2rem; 
-    z-index: 50;
-    width: 18rem;
-    filter: drop-shadow(1px 1px 50px #000);
+    right: 1rem;
+    z-index: 1;
+    animation: balanco 5s infinite alternate ease-in-out;
+    width: 250px;
+    height: 250px;
+}
+
+.promotion::before {
+    content: "→";
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 3rem;
+    animation: seta 1.5s infinite alternate;
+    animation-timing-function: cubic-bezier(0.25,0,0,1);
+}
+
+.promotion img {
+    position: absolute;
+    width: 100%; 
+}
+
+#shirt {
+    z-index: 1;
+    filter: drop-shadow(1px 1px 10px #000);
+}
+
+#text {
+    bottom: 1rem;
+    transform: scale(0.7) translateY(-30px);
+    filter: drop-shadow(1px 1px 5px #000);
+    z-index: 2;
+    transition: 0.3s;
+}
+
+#text:hover {
+    transform: translateY(-20px) scale(0.9);
+}
+
+@keyframes seta {
+    0% {}
+
+    100% {
+        transform: translateX(-20px)
+    }
+}
+
+@keyframes balanco {
+    0% {}
+    50% {
+        transform: translateY(5px) scale(1.025);
+    }
+    100% {
+        transform: translateY(-10px) scale(1.05);
+    }
 }
 
 @media (max-width: 1000px) {
-    .container-main .promotion img {
-        width: 12rem;
+    .promotion {
+        width: 10rem;
+        height: 10rem;
     }
+
+    #text {
+        transform: scale(0.5) translateY(-30px);
+    }      
 }
