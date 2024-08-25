@@ -221,3 +221,18 @@ main {
 .product-card .info-mobile {
     display: none;
 }
+
+.container-main .promotion img {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem; 
+    z-index: 50;
+    width: 18rem;
+    filter: drop-shadow(1px 1px 50px #000);
+}
+
+@media (max-width: 1000px) {
+    .container-main .promotion img {
+        width: 12rem;
+    }
+}

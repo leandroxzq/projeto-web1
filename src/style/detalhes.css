@@ -1,7 +1,7 @@
 @import url('../../paleta/paleta.css');
 
 main {
-    min-width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 50px 10px;
 }
@@ -27,9 +27,20 @@ main {
     width: 37.5rem;
 }
 
-@media (width <= 600px) {
+@media (width <= 800px) {
     .container img {
-        width: 25rem;
+        max-width: 25rem;
+    }
+}
+
+@media (width <= 400px) {
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container img {
+        max-width: 15rem;
     }
 }
 
