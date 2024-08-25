@@ -145,7 +145,6 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    padding: 50px 100px;
     width: 100%;
 }
 
@@ -153,6 +152,15 @@ main {
     max-width: 320px;
     position: relative;
     flex: 1 1 calc(25% - 20px);
+    transition: transform 0.3s ease;
+}
+
+.product-container:hover .product-card {
+    transform: scale(0.9);
+}
+
+.product-container .product-card:hover {
+    transform: scale(1.1);
 }
 
 @media (width <= 1000px) {
@@ -299,5 +307,9 @@ main {
 
     #text {
         transform: scale(0.5) translateY(-30px);
-    }      
+    }   
+    
+    #text:hover {
+        transform: translateY(-20px) scale(0.7);
+    }
 }
