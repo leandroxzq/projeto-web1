@@ -110,26 +110,6 @@ header {
     width: 240px;
 }
 
-@media (width <= 850px) {
-    .background-image {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;  
-        gap: 80px;      
-    }
-
-    .logos {
-        margin: 30px;
-        height: 80px;
-        width: 100px;
-    }
-
-    .logos:nth-child(3){
-        height: 60px;
-        width: 140px;
-    }
-}
-
 main {
     background-color: #fff;
 }
@@ -149,7 +129,6 @@ main {
 }
 
 .product-card {
-    max-width: 320px;
     position: relative;
     flex: 1 1 calc(25% - 20px);
     transition: transform 0.3s ease;
@@ -163,30 +142,12 @@ main {
     transform: scale(1.1);
 }
 
-@media (width <= 1000px) {
-    .product-card {
-        flex: 1 1 calc(50% - 20px);
-    }
-
-    .product-card img {
-        width: 100%;
-        max-height: 430px;
-    }
-
-    .product-container .product-card {
-        transform: none;
-    }
-    
-    .product-container:hover .product-card {
-        transform: none;
-    }
-    
-    .product-container .product-card:hover {
-        transform: none; 
-    }
-}
-
 @media (width <= 768px) {
+
+    .container-main {
+        padding: 0;
+    }    
+
     .product-container {
         padding: 0;
         min-width: 100%;
@@ -312,6 +273,45 @@ main {
 }
 
 @media (max-width: 1000px) {
+
+    .background-image {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        gap: 80px;      
+    }
+
+    .logos {
+        margin: 30px;
+        height: 80px;
+        width: 100px;
+    }
+
+    .logos:nth-child(3){
+        height: 60px;
+        width: 140px;
+    }
+
+    .container-main {
+        padding: 20px;
+    }
+
+    .product-card {
+        flex: 1 1 50%;
+    }
+
+    .product-container .product-card {
+        transform: none;
+    }
+    
+    .product-container:hover .product-card {
+        transform: none;
+    }
+    
+    .product-container .product-card:hover {
+        transform: none; 
+    }
+
     .promotion {
         width: 10rem;
         height: 10rem;
