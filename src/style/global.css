@@ -117,11 +117,12 @@ header .header-icon span:hover {
 
 @media (width <= 500px) {
     header {
+        padding: 0;
         height: 120px;
     }
     
     header nav {
-        padding: 5px;
+        padding: 0px;
         justify-content: center;
         align-items: center;
     }
@@ -138,6 +139,17 @@ header .header-icon span:hover {
 
     header nav a .logo {
         font-size: 1.5rem;
+    }
+}
+
+@media (width <= 220px) {
+
+    header {
+        height: 180px;
+    }
+
+    header .header-icon {
+        flex-wrap: wrap;
     }
 }
 
