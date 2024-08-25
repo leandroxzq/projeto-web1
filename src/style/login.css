@@ -105,6 +105,6 @@ a {
 @media (width <= 540px) {
     form {
         padding: 20px;
-        width: 350px;
+        width: 90vw;
     }
   }
