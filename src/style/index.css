@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url('../../paleta/paleta.css');
+@import url('../../components/paleta/paleta.css');
 
 * {
     margin: 0;
@@ -131,13 +131,13 @@ header {
 }
 
 main {
+    padding: 100px 0px;
     background-color: #fff;
 }
 
 .container-main {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 50px;
 }
 
 .product-container {

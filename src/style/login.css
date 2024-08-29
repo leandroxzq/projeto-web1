@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 @import url('logo.css');
-@import url('../../paleta/paleta.css');
+@import url('../../components/paleta/paleta.css');
 
 * {
     margin: 0;
