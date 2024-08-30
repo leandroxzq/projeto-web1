@@ -207,6 +207,10 @@ main form {
     background-color: var(--secondary-green);
 }
 
+a {
+    text-decoration: none;
+}
+
 @media (width <= 800px) {
     .cart-header, .cart-product {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr
@@ -230,6 +234,10 @@ main form {
     .cart-product input[type="button"] {
         position: relative;
         bottom: 30px;
+    }
+
+    p {
+        line-height: 20px;
     }
 }
         
