@@ -70,11 +70,11 @@ main {
     color: #000000;
     text-align: center;
     margin-bottom: 20px;
-    overflow: hidden; /* Esconde o texto que está fora da área visível */
-    white-space: nowrap; /* Impede a quebra de linha */
-    border-right: 10px solid; /* Cria o cursor de escrita */
-    width: 15ch; /* Controla o número de caracteres visíveis */
-    animation: typing 2s steps(30) forwards, opacity 2s step-end infinite;
+    padding-right: 10px;
+    overflow: hidden; 
+    white-space: nowrap;
+    border-right: 10px solid; 
+    animation: typing 2s steps(30) forwards, opacity 0.5s step-end infinite;
 }
 
 @keyframes typing {
@@ -82,7 +82,7 @@ main {
         width: 0;
     }
     to {
-        width: 260px;
+        width: 270px;
     }
 }
 
