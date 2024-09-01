@@ -4,12 +4,12 @@
          url('../font/Protest.otf') format('opentype');
 }
 
-.logo {
+.nav__logo {
     list-style-type: none;
     text-decoration: none;
     font-family: 'protest', sans-serif;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.3rem;
     transition: transform 0.3s ease;
 }
 
@@ -17,11 +17,11 @@
     color: #000;
 }
 
-.logo::after {
+.nav__logo h1::after {
     font-size: 0.3em;
     content: '©';
 }
 
-.logo:hover {
+.nav__logo:hover {
     transform: scale(1.05);
 }

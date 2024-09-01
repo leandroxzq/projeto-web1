@@ -11,23 +11,23 @@
     <title>Carrinho</title>
 </head>
 <body>
-    <header>
-        <div class="alternate-container">
-            <div class="alternate-text">PARCELAMENTO EM ATÉ 3X SEM JUROS</div>
-            <div class="alternate-text">FRETE GRÁTIS EM COMPRAS ACIMA DE R$399,90*</div>
+    <header class="header">
+        <div class="header__alternate">
+            <div class="header__text">PARCELAMENTO EM ATÉ 3X SEM JUROS</div>
+            <div class="header__text">FRETE GRÁTIS EM COMPRAS ACIMA DE R$399,90*</div>
         </div>
-        <nav>
-            <a href="index.html"><h1 class="logo">Vllutom</h1></a>
-            <div class="header-icon">
-                <a href="login/login.html"><span class="material-symbols-outlined">person</span></a>
-                <p>R$0,00</p>
-                <a href="carrinho.html"><span class="material-symbols-outlined">shopping_bag</span></a>
-            </div>
+        <nav class="header__nav">            
+            <a href="index.html" class="nav__logo"><h1>Vllutom</h1></a>
+            <div class="nav__icon-container">
+                <a href="login/login.html" class="nav__icon-link"><span class="material-symbols-outlined">person</span></a>
+                <p class="nav__price">R$0,00</p>
+                <a href="carrinho.html" class="nav__icon-link"><span class="material-symbols-outlined">shopping_bag</span></a>
+            </div>         
         </nav>
     </header>
     <main>
         <div class="cart-and-payment">
-            <form action="">
+            <form action="" id="form">
                 <div class="cart-header">
                     <input type="checkbox" id="select-all">
                     <span>Item Name</span>
@@ -36,7 +36,7 @@
                     <span>Total</span>
                 </div>
                 <div class="cart-product">
-                    <input type="checkbox" name="select-item">
+                    <input type="checkbox" name="select-item" class="select-item">
                     <div class="product-details">
                         <img src="common/img_camiseta/Sufgang_Arabic_Script_Black.jpeg">
                         <div class="product-info">
@@ -56,7 +56,7 @@
                     <input type="button" value="x">
                 </div>
                 <div class="cart-product">
-                    <input type="checkbox" name="select-item">
+                    <input type="checkbox" name="select-item" class="select-item">
                     <div class="product-details">
                         <img src="common/img_jaqueta/High_Camo_Jacquard_Jacket.jpg">
                         <div class="product-info">
@@ -80,36 +80,43 @@
                         <h3>Pagamento</h3>
                         <div class="payment-card">
                             <label for="card-number">Número do Cartão</label>
+                            <div class="fill" id="card-numberDiv"></div>
                             <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000">
                             <label for="expiry-date">Data de Validade</label>
+                            <div class="fill" id="expirationDataDiv"></div>
                             <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
                             <label for="cvv">CVV</label>
+                            <div class="fill" id="cvvDiv"></div>
                             <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
                         </div>
                     </div>
                     <div class="address">
                         <h3>Endereço de Entrega</h3>
                         <label for="address">Endereço</label>
+                        <div class="fill" id="adressDiv"></div>
                         <input type="text" id="address" name="address" placeholder="Rua Exemplo, 123">
                         <label for="city">Cidade</label>
+                        <div class="fill" id="cityDiv"></div>
                         <input type="text" id="city" name="city" placeholder="São Paulo">
                         <label for="zipcode">CEP</label>
+                        <div class="fill" id="zipDiv"></div>
                         <input type="text" id="zipcode" name="zipcode" placeholder="00000-000">           
-                        <button type="submit">Finalizar Compra</button>
+                        <button type="submit" onclick="validarPagamento(event), validarCep(event)">Finalizar Compra</button>
                     </div>
                 </div>
             </form>
         </div>
     </main>
-    <footer>
-        <div class="icon-network">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-youtube"></i>
+    <footer class="footer">
+        <div class="footer__network">
+            <i class="bi bi-facebook footer__icon"></i>
+            <i class="bi bi-instagram footer__icon"></i>
+            <i class="bi bi-twitter footer__icon"></i>
+            <i class="bi bi-youtube footer__icon"></i>
         </div>
-        <p>© 2024 Vllutom - Todos os direitos reservados</p>
-        <a href="sobre.html">Sobre</a>
+        <p class="footer__reserved">© 2024 Vllutom - Todos os direitos reservados</p>
+        <a href="sobre.html" class="footer_about">Sobre</a>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
