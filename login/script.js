@@ -1,102 +1,96 @@
-const form = document.getElementById('form');
-
-//Login
-const nome = document.getElementById('nome');
-const rnome = document.getElementById('rnome');
-
-const senha = document.getElementById('senha');
-const rsenha = document.getElementById('rsenha');
-
-
-//Cadastro
-const email = document.getElementById('email');
-const remail = document.getElementById('remail');
-
-const senha1 = document.getElementById('senha1');
-const senha2 = document.getElementById('senha2');
-
-// 
-
-const recuperar = document.getElementById('recuperar');
-const rrecuperar = document.getElementById('rrecuperar');
-
-function validarLogin(event) {
-    event.preventDefault();
+function validarLogin() {
     let validado = true;
 
-    // Validação do campo nome
-    if (nome.value === "") {
-        rnome.innerText = "! Insira seu Usuário";
-        validado = false;
-    } else {
-        rnome.innerText = ""; 
-    }
+    const campos = [
+        { id: 'nome', mensagemErro: "! Insira seu Usuário", erroId: 'rnome' },
+        { id: 'senha', mensagemErro: "! Insira sua Senha", erroId: 'rsenha' },
+    ]
 
-    // Validação do campo senha
-    if (senha.value === "") {
-        rsenha.innerText = "! Insira sua Senha";
-        validado = false;
-    } else {
-        rsenha.innerText = ""; 
-    }
+    campos.forEach(campo => {
+        const elemento = document.getElementById(campo.id)
+        const erro = document.getElementById(campo.erroId)
+
+        if (elemento.value === "") {
+            erro.innerText = campo.mensagemErro
+            validado = false;
+        } else {
+            erro.innerText = ""
+        }
+    });
 
     if (validado) {
-        window.location.href = '../index.html';
+        document.getElementById('loader').classList.add('show');
+        setTimeout(() => window.location.href = '../index.html', 1000);
     }
 }
 
-function validarCadastro(event) {
-    event.preventDefault(); 
+const formLogin = document.getElementById("forml");
+if (formLogin) {
+    formLogin.addEventListener("submit", (event) => {
+        event.preventDefault();
+        validarLogin();
+    });
+}
+
+function validarCadastro() {
     let validado = true;
-    // Validação do campo nome
-    if (nome.value === "") {
-        rnome.innerText = "! Insira seu Usuário";
-        validado = false;
-    } else {
-        rnome.innerText = ""; 
-    }
 
-    // Validação do campo email
+    const campos = [
+        { id: 'nome', mensagemErro: "! Insira seu Usuário", erroId: 'rnome' },
+        { id: 'email', mensagemErro: "! Insira seu Email", erroId: 'remail' },
+        { id: 'senha1', mensagemErro: "! Insira sua Senha", erroId: 'rsenha' },
+        { id: 'senha2', mensagemErro: "! Confirme sua Senha", erroId: 'rsenha2' }
+    ];
 
-    if (email.value === ""){
-        remail.innerText = "! Insira seu Email";
-        validado = false;
-    } else {
-        remail.innerText = ""; 
-    }
-
-    // Validação do campo senha
-    if (senha1.value === "") {
-        rsenha.innerText = "! Insira sua Senha";
-        validado = false;
-    } else {
-        rsenha.innerText = ""; 
-    }
-
-    if (senha2.value === "") {
-        rsenha2.innerText = "! Insira sua Senha";
-        validado = false;
-    } else {
-        rsenha2.innerText = ""; 
-    }
+    campos.forEach(campo => {
+        const elemento = document.getElementById(campo.id);
+        const erro = document.getElementById(campo.erroId);
+        
+        if (elemento.value === "") {
+            erro.innerText = campo.mensagemErro;
+            validado = false;
+        } else {
+            erro.innerText = "";
+        }
+    });
 
     if (validado) {
-        window.location.href = 'login.html';
+        document.getElementById('loader').classList.add('show');
+        setTimeout(() => window.location.href = 'login.html', 1000);
     }
 }
 
-function validarEmailUsuario(event) {
-    event.preventDefault(); 
+const formCadastro = document.getElementById("formc");
+if (formCadastro) {
+    formCadastro.addEventListener("submit", (event) => {
+        event.preventDefault();
+        validarCadastro();
+    });
+}
+
+function validarEmail () {
+    const inputEmail = document.getElementById("recuperar");
+    const erroEmail = document.getElementById("rrecuperar");
+
     let validado = true;
 
-    if (recuperar.value === "") {
-        rrecuperar.innerText = "! Insira seu Email";
+    if (inputEmail.value === "") {
+        erroEmail.innerText = "! Insira seu Email"
         validado = false;
-    }  else {
-        rrecuperar.innerText = ""; 
+    } else {
+        erroEmail.innerText = ""
     }
 
     if (validado) {
-        window.location.href = 'login.html';
+        document.getElementById('loader').classList.add('show');
+        setTimeout(() => window.location.href = 'login.html', 1000);
     }
+}
+
+const email = document.getElementById("formr");
+if (email) {
+    email.addEventListener("submit", (event) => {
+        event.preventDefault();
+        validarEmail()
+    })
 }

@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="background"></div>
-    <form>
+    <form id="formr">
         <nav>
             <a href="../index.html"><h1 class="nav__logo black">Vllutom</h1></a>
         </nav>
@@ -22,8 +22,13 @@
         <label for="recuperar">Nome de usuário ou e-mail:</label>
         <div id="rrecuperar" class="error"></div>
         <input type="email" id="recuperar" name="recuperar">
-        <button class="entrar" type="submit" onclick="validarEmailUsuario(event)">Entrar</button>
+        <button class="entrar" type="submit">Entrar</button>
     </form>
+    <div class="loader" id="loader">
+        <div class="loader__background">
+            <div class="loader__circle" id="loader"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
