@@ -220,7 +220,7 @@ a {
 
 @media (width <= 800px) {
     main form {
-        padding: 0px;
+        padding: 10px;
     }
 
     .cart-header, .cart-product {
